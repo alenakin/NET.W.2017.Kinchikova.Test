@@ -11,7 +11,7 @@ namespace Task2.Solution
     {
         public abstract string WorkingDirectory { get; set; }
 
-        public abstract string FileExtension { get; set; }
+        public abstract string FileExtension { get; set; } 
 
         public void GenerateFiles(int filesCount, int contentLength)
         {
