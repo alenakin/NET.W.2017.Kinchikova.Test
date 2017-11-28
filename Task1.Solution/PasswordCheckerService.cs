@@ -10,11 +10,30 @@ namespace Task1.Solution
     {
         private IRepository repository;
 
+        private Func<string, Tuple<bool, string>> validationRules;
+
         public PasswordCheckerService(IRepository repository)
         {
             this.repository = repository;
         }
 
+        public PasswordCheckerService(IRepository repository, Func<string, Tuple<bool, string>> validationRules)
+        {
+            this.repository = repository;
+            this.validationRules += validationRules;
+        }
 
+        public void AddValidationRule(Func<string, Tuple<bool, string>> validationRule)
+        {
+            validationRules += validationRule;
+        }
+
+        public Tuple<bool, string> VerifyPassword(string password)
+        {
+            if (validationRules(password).Item1 == false)
+            {
+
+            }
+        }
     }
 }
