@@ -15,6 +15,5 @@ namespace Task1.Solution
             this.repository = repository;
         }
 
-
     }
 }

@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckerDecorator.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="PasswordChecker.cs" />
     <Compile Include="PasswordCheckerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlRepository.cs" />
