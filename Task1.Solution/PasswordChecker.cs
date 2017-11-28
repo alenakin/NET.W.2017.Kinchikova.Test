@@ -15,9 +15,6 @@ namespace Task1.Solution
             this.repository = repository;
         }
 
-        //public abstract Tuple<bool, string> VerifyPassword(string password)
-        //{
-
-        //}
+        public abstract Tuple<bool, string> VerifyPassword(string password);
     }
 }

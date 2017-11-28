@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckerDecorator.cs" />
+    <Compile Include="Decorators\NullArgChecker.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="PasswordChecker.cs" />
     <Compile Include="PasswordCheckerService.cs" />

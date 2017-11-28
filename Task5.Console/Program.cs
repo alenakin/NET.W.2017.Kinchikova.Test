@@ -2,7 +2,8 @@
 {
     using System.Collections.Generic;
     using System;
-    using Task5;
+    using Task5.Solution;
+    using Task5.Solution.Converters;
 
     class Program
     {
@@ -15,13 +16,16 @@
                     new BoldText {Text = "Some bold text"}
                 };
 
+            var htmlConverter = new ToHtmlConverter();
+            var plainTextConverter = new ToPlainTextConverter();
+            var laTeXConverter = new ToLaTeXConverter();
             Document document = new Document(parts);
 
-            Console.WriteLine(document.ToHtml());
+            Console.WriteLine(htmlConverter.Convert(document));
 
-            Console.WriteLine(document.ToPlainText());
+            Console.WriteLine(plainTextConverter.Convert(document));
 
-            Console.WriteLine(document.ToLaTeX());
+            Console.WriteLine(laTeXConverter.Convert(document));
         }
     }
 }

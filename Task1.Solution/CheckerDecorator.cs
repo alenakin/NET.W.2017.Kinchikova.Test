@@ -8,7 +8,7 @@ namespace Task1.Solution
 {
     public abstract class CheckerDecorator : PasswordChecker
     {
-        PasswordChecker checker;
+        protected PasswordChecker checker;
 
         public CheckerDecorator(IRepository repository, PasswordChecker checker) : base(repository)
         {
